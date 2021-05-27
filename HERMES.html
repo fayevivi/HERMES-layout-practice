@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HERMES</title>
+
+    <link href="./fontawesome-free-5.15.2-web/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-color: #f6f1eb;
+            color: #444;
+            font-family: 'Syne Mono', monospace;
+            font-weight: 200;
+            line-height: 157.14286%;
+        }
+
+        .minibar {
+            width: 95%;
+        }
+
+
+        .minibar ul {
+            display: flex;
+            list-style: none;
+            justify-content: flex-end;
+        }
+
+        .minibar ul a {
+            text-decoration: none;
+            font-size: .84615rem;
+            background: transparent;
+            line-height: 1;
+            padding: 0;
+            border: 0;
+            color: #696969;
+            margin-left: 20px;
+        }
+
+        .navbarWrap {
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            margin: 0px auto;
+        }
+
+        .navbarWrap i {
+            margin-right: 5px;
+        }
+
+        .navbarleft {
+            display: flex;
+        }
+
+        .Menuspan {
+            margin: 0px 5px;
+            padding-right: 5px;
+        }
+
+        .navbarright {
+            display: flex;
+        }
+
+        .accountspan {
+            margin: 0px 5px;
+            padding-right: 5px;
+        }
+
+        section {
+            margin: 70px auto;
+        }
+
+        .container {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h2 {
+            text-transform: uppercase;
+        }
+
+        p {
+            /* font-size: 1.23077rem; */
+            line-height: 1.84615rem;
+            /* text-align: center; */
+            overflow-wrap: break-word;
+        }
+
+        a {
+            text-decoration: none;
+            padding-bottom: 40px;
+        }
+
+        .imgwrapsection1 {
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .section3 {
+            background-color: #fffcf7;
+            padding: 60px 90px;
+        }
+
+        .price::before {
+            content: '$';
+        }
+
+        .section5 {
+            background-color: #fffcf7;
+            padding: 60px 90px;
+        }
+
+        .section7 {
+            background-color: #fffcf7;
+            padding: 60px 90px;
+        }
+
+        .footer {
+            background-color: #fff;
+            padding: 50px;
+        }
+
+        .content {
+            margin: 0 auto;
+            width: 70%;
+        }
+
+        .wordswrap {
+            margin: 0 auto;
+        }
+
+
+
+        .footerrow1 p {
+            font-size: 13px;
+            line-height: .8rem;
+
+        }
+
+        .help {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: auto;
+        }
+
+        .help p {
+            text-align: center;
+        }
+
+        .find {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: auto;
+        }
+
+        .find p {
+            text-align: center;
+        }
+
+        .newsletter::before {
+            content: '';
+            display: block;
+            width: 90%;
+            height: 1px;
+            background-color: #cacaca;
+            margin-bottom: 50px;
+        }
+
+        .newsletter {
+            margin: 50px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .newsletter p {
+            font-size: 12px;
+        }
+
+        .newsletter button {
+            border-radius: 5%/10%;
+            padding: 10px 50px;
+            background-color: #444444;
+            color: #fff;
+        }
+
+        .list ul {
+            padding-left: 0px;
+        }
+
+        .list ul li {
+            list-style-type: none;
+            font-size: 13px;
+        }
+
+        .footernav::after {
+            content: '';
+            display: block;
+            width: 90%;
+            height: 1px;
+            background-color: #cacaca;
+        }
+
+        .final ul {
+            display: flex;
+            padding: 0px 0px;
+            gap: 10px;
+        }
+
+        .final ul li {
+            list-style-type: none;
+            font-size: 13px;
+            gap: 5px;
+        }
+
+        .final ul li:nth-of-type(3) {
+            margin-left: auto;
+        }
+
+        .footerlogowrap {
+            margin: 0 auto;
+            width: 70px;
+            height: 40px;
+        }
+
+        .footerlogowrap img {
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="minibarWrap">
+        <div class="minibar">
+            <ul>
+                <li><a href="#">United States</a></li>
+                <li><a href="#">Find a Store</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="navbarWrap">
+        <div class="navbarleft">
+            <div class="menu"><i class="fas fa-bars"></i><span class="Menuspan">Menu</span></div>
+            <div class="searchbar">
+                <span class="searchicon"><i class="fas fa-search"></i></span>
+                <input type="search" id="search" placeholder="search">
+            </div>
+
+        </div>
+        <div class="logowrap">
+            <img src="./imgs/hermes-logo.svg" alt="">
+        </div>
+        <div class="navbarright">
+            <div class="accountspan">
+                <i class="far fa-user"></i><span>Account</span>
+            </div>
+            <div class="cart">
+                <i class="fas fa-shopping-cart"></i><span>cart</span>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <section class="section1">
+            <h2>every shade of red</h2>
+            <p>Beige Ébloui, Rose Oasis, Corail Aqua, all lips wear summer reds!<br></p>
+            <a href="#">
+                Blush with pleasure</a>
+
+            <div class="imgwrapsection1"><img src="./imgs/P_169_ROUGE_PE21_PUSH_EDITO1.jpg" alt=""></div>
+        </section>
+        <section class="section2">
+            <h2>Our cave of wonders</h2>
+            <div class="row s2row1">
+                <div class="col-6 col-md-3">
+                    <div class="imgwrap">
+                        <img src="./imgs/P_11_CH_SLG_082356CKAD.jpg" alt="">
+                    </div>
+                    <h6>SMALL LEATHER GOODS</h6>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="imgwrap">
+                        <img src="./imgs/P_11_CH_MAKEUP_60168SV045.jpg" alt="">
+                    </div>
+                    <h6>MAKE UP</h6>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="imgwrap">
+                        <img src="./imgs/P_11_CH_JEWELRY_120642B00.jpg" alt="">
+                    </div>
+                    <h6>JEWELRY</h6>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="imgwrap">
+                        <img src="./imgs/P_11_CH_WSILK_003682S08.jpg" alt="">
+                    </div>
+                    <h6>WOMEN SILK</h6>
+                </div>
+            </div>
+            <div class="row s2row2">
+                <div class="col-6 col-md-3">
+                    <div class="imgwrap">
+                        <img src="./imgs/P_11_CH_WFASHJEW_510414FOA4.jpg" alt="">
+                    </div>
+                    <h6>Fashion JEWELRY</h6>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="imgwrap">
+                        <img src="./imgs/P_11_CH_SHOES_211242ZCB.jpg" alt="">
+                    </div>
+                    <h6>SHOES</h6>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="imgwrap">
+                        <img src="./imgs/P_11_CH_WFASHACCESS_211001GBL.jpg" alt="">
+                    </div>
+                    <h6>FASHION ACCESSORIES</h6>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="imgwrap">
+                        <img src="./imgs/P_11_CH_FRAGRANCES_33003.jpg" alt="">
+                    </div>
+                    <h6>FRAGRANCES</h6>
+                </div>
+            </div>
+        </section>
+        <section class="section3">
+            <h2>Whirlwind of color</h2>
+            <p>A fresh breeze blows over silk.<br>
+                The air is warmer, colors brighten and designs proliferate. This season, scarves, cashmere shawls and
+                silk chiffons play the accumulation card and invite joyful and bold wearing styles.<br></p>
+            <a href="#">Find your style</a>
+            <div class="imgwrap"><img src="./imgs/P_169_Silk_SS21_Assa_6.jpg" alt=""></div>
+        </section>
+        <section class="section4">
+            <h2>Flights of silk fancy</h2>
+            <p>The scarf 90 promises beautiful getaways this season. The designs highlight know-how and make this
+                accessory a rich tapestry of colorful expression.</p>
+            <a href="#">
+                Hoist the colors
+            </a>
+            <div class="row s4row1">
+                <div class="col-12 col-md-6">
+                    <div class="imgwrap"><img src="./imgs/P_11_Silk_SS21_Assa_9.jpg" alt=""></div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="d-flex">
+                        <div class="col-6 col-md-6">
+                            <div class="imgwrap"><img src="./imgs/243691S+06_set.jpg" alt=""></div>
+                            <h6>L'Epopee d'Hermes shawl 140</h6>
+                            <p class="price">1000</p>
+                        </div>
+                        <div class="col-6 col-md-6">
+                            <div class="imgwrap"><img src="./imgs/003618S+04_set.jpg" alt=""></div>
+                            <h6>Le Timbalier scarf 90</h6>
+                            <p class="price">435</p>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="col-6 col-md-6">
+                            <div class="imgwrap"><img src="./imgs/003682S+07_set.jpg" alt=""></div>
+                            <h6>Selle des Steppes scarf 90</h6>
+                            <p class="price">435</p>
+                        </div>
+                        <div class="col-6 col-md-6">
+                            <div class="imgwrap"><img src="./imgs/002987S+21_set.jpg" alt=""></div>
+                            <h6>La Marche du Zambeze scarf 90</h6>
+                            <p class="price">435</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section5">
+            <h2>
+                Men's spring-summer 2021 collection </h2>
+            <p>This summer, the collection expresses lightness, simplicity and nonchalance. Plays on stripes, flashes of
+                fluorescent color and natural shades combine with refined materials and spontaneity.<br></p>
+            <a href="#">
+                Make way for the energy of the now</a>
+            <div class="videowrap">
+                <img src="./imgs/P_169_MRTW_SS21_cover.jpeg"></img>
+            </div>
+        </section>
+
+        <section class="section6">
+            <h2>Cutting edge</h2>
+            <p>From sharp styles to technical materials, the men’s wardrobe showcases the breadth of Hermès know-how.
+            </p>
+            <a href="#">
+                Innovate immediately</a>
+            <div class="row s6row1">
+                <div class="col-12 col-md-6">
+                    <div class="imgwrap">
+                        <img src="./imgs/P_11_SELECTION_HOMME_2021.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="d-flex">
+                        <div class="col-6 col-md-6">
+                            <div class="imgwrap">
+                                <img src="./imgs/803768T+11_set.jpg" alt="">
+                                <h6>Cheval Punk pocket square 45</h6>
+                                <p class="price">165</p>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-6">
+                            <div class="imgwrap">
+                                <img src="./imgs/433771T+15_set.jpg" alt="">
+                                <h6>Maillons Compression losange, large model</h6>
+                                <p class="price">660</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="col-6 col-md-6">
+                            <div class="imgwrap">
+                                <img src="./imgs/393766T+04_set.jpg" alt="">
+                                <h6>Himalaya hand-woven muffler</h6>
+                                <p class="price">890</p>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-6">
+                            <div class="imgwrap">
+                                <img src="./imgs/353576T+01_set.jpg" alt="">
+                                <h6>La Danse des Chevaux scarf 90</h6>
+                                <p class="price">580</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section7">
+            <h2>
+                Know the ropes </h2>
+            <p>Relax by the sea with these shoes revisited for the summer in suede goatskin with a traditional rope
+                sole. The sandals feature the iconic H, while the loafers promise a modern look in natural shades. They
+                create a casual silhouette for day or evening wear.<br></p>
+
+            <div class="imgwrap">
+                <img src="./imgs/P_169_SHOES_SS21_4.jpg"></img>
+            </div>
+        </section>
+
+        <section class="section8">
+            <h2>Coastal creations</h2>
+            <p>Sunny and light, the new collection of shoes is inspired by summer vibrations to revisit the house’s
+                iconic details.</p>
+            <a href="#">
+                Do the twist
+            </a>
+            <div class="row s8row1">
+                <div class="col-12 col-md-6">
+                    <div class="imgwrap"><img src="./imgs/P_11_SHOES_SS21_9.jpg" alt=""></div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="d-flex">
+                        <div class="col-6 col-md-6">
+                            <div class="imgwrap"><img src="./imgs/202892ZH01_set.jpg" alt=""></div>
+                            <h6>Blaise loafer</h6>
+                            <p class="price">1250</p>
+                        </div>
+                        <div class="col-6 col-md-6">
+                            <div class="imgwrap"><img src="./imgs/211907ZHP7_set.jpg" alt=""></div>
+                            <h6>Chypre sandal</h6>
+                            <p class="price">720</p>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="col-6 col-md-6">
+                            <div class="imgwrap"><img src="./imgs/181403ZHCB_set.jpg" alt=""></div>
+                            <h6>Izmir sandal</h6>
+                            <p class="price">660</p>
+                        </div>
+                        <div class="col-6 col-md-6">
+                            <div class="imgwrap"><img src="./imgs/201459ZHV7_set.jpg" alt=""></div>
+                            <h6>Avantage sneaker</h6>
+                            <p class="price">810</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section9">
+            <h2>
+                Podcasts from Le Monde d‘Hermès </h2>
+            <p>In this third series of podcasts, we follow Penelope from city to city as she investigates a string of
+                mysteries.<br></p>
+            <a href="#">Discover the episodes</a>
+
+            <div class="imgwrap">
+                <img src="./imgs/P_169_Hermes_podcasts_2021_EN.jpg"></img>
+            </div>
+        </section>
+
+    </div>
+    <div class="footer">
+
+        <div class="content">
+            <div class="row footerrow1">
+                <div class="d-flex wordswrap">
+                    <div class="col-6 col-md-6 help">
+                        <h6>HERE TO HELP</h6>
+                        <p>
+                            Have a question? You may find an answer in our FAQs.<br>
+                            But you can also contact us:<br>
+                            Call 800-441-4488<br>
+                            Monday through Friday: 9am - 6pm ET<br>
+                            Saturday: 10am - 6pm ET<br>
+                            Send us an email
+                        </p>
+                    </div>
+                    <div class="col-6 col-md-6 find">
+                        <h6>FIND A STORE</h6>
+                        <p>
+                            Stores selling beauty products<br>
+                            Hermes stores
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="newsletter">
+                <h6>Let’s keep the conversation going</h6>
+                <p>Receive our newsletter and discover our stories, collections, and surprises.</p>
+                <button>
+                    Subscribe</button>
+            </div>
+            <div class="footernav">
+                <div class="row">
+                    <div class="col-3 col-md-3 services list">
+                        <h6>SEVICES</h6>
+                        <ul>
+                            <li>Contact us</li>
+                            <li>FAQ</li>
+                            <li>Find a store</li>
+                            <li>Stores selling beauty products</li>
+                            <li>Made to measure</li>
+                            <li>Maintenance and repair</li>
+                        </ul>
+                    </div>
+                    <div class="col-3 col-md-3 orders list">
+                        <h6>ORDERS</h6>
+                        <ul>
+                            <li>Payment</li>
+                            <li>Shipping</li>
+                            <li>Collect in store</li>
+                            <li>Track orders</li>
+                            <li>Returns $ exchamges</li>
+                        </ul>
+                    </div>
+                    <div class="col-3 col-md-3 hermes list">
+                        <h6>La Maison Hermès</h6>
+                        <ul>
+                            <li>
+                                Sustainable development </li>
+                            <li>
+                                The Hermès Foundation </li>
+                            <li>
+                                Join Hermès </li>
+                            <li>
+                                Finance & Governance </li>
+                            <li>
+                                Our partner brands </li>
+                        </ul>
+                    </div>
+                    <div class="col-3 col-md-3 legal list">
+                        <h6>LEGAL</h6>
+                        <ul>
+                            <li>Terms and conditions</li>
+                            <li>Privacy & cookies</li>
+                            <li>BCR</li>
+                            <li>California Transparency in Supply Chanin Act</li>
+                            <li>California Privacy Provisions</li>
+                            <li>Legal issues</li>
+                            <li>Accessibility</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="final">
+                <ul>
+                    <li>Unitied States</li>
+                    <li> copy from © Hermès 2021. All rights reserved. </li>
+                    <li><i class="fab fa-facebook-f"></i></li>
+                    <li><i class="fab fa-instagram"></i></li>
+                    <li><i class="fab fa-twitter"></i></li>
+                    <li><i class="fab fa-twitter"></i></li>
+                </ul>
+            </div>
+            <div class="footerlogowrap">
+                <img src="./imgs/hermes-logo.svg" alt="">
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="./jquery-3.6.0.js"></script>
+    <script>
+
+
+    </script>
+
+</body>
+
+</html>
