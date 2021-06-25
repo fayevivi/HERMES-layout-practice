@@ -48,8 +48,9 @@
         .navbarWrap {
             width: 90%;
             display: flex;
-            justify-content: space-between;
+            /* justify-content: center; */
             margin: 0px auto;
+            /* flex: 1; */
         }
 
         .navbarWrap i {
@@ -58,6 +59,8 @@
 
         .navbarleft {
             display: flex;
+            flex: 1;
+            min-width: -webkit-min-content;
         }
 
         .Menuspan {
@@ -65,8 +68,16 @@
             padding-right: 5px;
         }
 
+        .logowrap {
+            /* margin-right: auto; */
+        }
+
         .navbarright {
             display: flex;
+            justify-content: flex-end;
+            flex: 1;
+            min-width: -webkit-min-content;
+
         }
 
         .accountspan {
